@@ -1,0 +1,136 @@
+
+body{
+
+  background-image: url("../../assets/img/background.jpg");
+}
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+.title {
+  font-size: 3em;
+  display:inline;
+
+  width: 100%;
+  padding:0  115px;
+  color: white;
+  text-transform: uppercase;
+}
+.header{
+
+  background-color: black;
+}
+.header a{
+  outline: none;
+  text-decoration: none;
+}
+
+.board {
+  padding: 10px 20vw;
+  width: 60vw;
+  height: 60vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+@media (min-width: 800px) {
+  .board {
+    width: 40vw;
+    height: 40vw;
+    padding: 10px 30vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .board {
+    width: 30vw;
+    height: 30vw;
+    padding: 10px 35vw;
+  }
+}
+
+.gridCell {
+  grid-column: span 1;
+  grid-row: span 1;
+  cursor: pointer;
+  border: 2px solid white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 5em;
+}
+
+.message {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(100,100,100);
+  color: white;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.c_message {
+  width:40%;
+  padding: 10px;
+  margin: 5px;
+  margin-right: 5%;
+}
+
+.reset {
+  text-align: center;
+  max-width: 40%;
+  padding: 10px;
+  margin: 5px;
+  margin-left: 5%;
+  background-color: rgb(150,150,150);
+  color: white;
+  border-radius: 5px;
+}
+
+.reset:hover {
+  background-color: rgb(50,50,50);
+  color: white;
+}
+
+.scoreboard {
+  background-color: rgb(200,200,200);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.scoreboardTitle {
+  font-size: 2em;
+  width: 100%;
+  padding: 5px;
+  background-color: rgb(50,50,50);
+  color: white;
+}
+
+.scoreTitle {
+  min-width: 30%;
+  padding: 5px;
+  margin: 5px;
+  background-color: white;
+  color: rgb(1, 45, 0);
+  border-radius: 5px;
+}
+
+.score {
+  min-width: 30%;
+  padding: 5px;
+  margin: 5px;
+  background-color: rgb(1, 45, 0);
+  color: white;
+  border-radius: 5px;
+}
