@@ -1,73 +1,11 @@
 import React from "react";
 import Header from "./Header";
-import _ from "lodash";
 
-import {BrowserRouter as Router, Route, Link, Switch, Redirect, browserHistory} from "react-router-dom";
 import PropTypes from "prop-types";
 
 class ScoreBoard extends React.PureComponent {
     constructor(props) {
         super(props);
-
-        /* this.state = {
-         itemData: {},
-         tempData: {},
-         };
-         this.handleEdit = this.handleEdit.bind(this);
-         this.handleDataChange = this.handleDataChange.bind(this);
-         this.saveData = this.saveData.bind(this);
-         this.closeButton = this.closeButton.bind(this);
-         this.clearData = this.clearData.bind(this); */
-    }
-
-    componentWillMount() {
-        //   this.props.showFilteredDetailsFunction();
-    }
-
-    componentWillReceiveProps(nextProps) {
-        /* const searchString = getSearchString(nextProps);
-         _.map(nextProps.items, (items, index) => {
-         const id = nextProps.items[index]['id'];
-         if (searchString === id) {
-         this.setState({
-         itemData: nextProps.items[index],
-         tempData: nextProps.items[index],
-         });
-         }
-         }); */
-    }
-
-    handleEdit() {
-        //   this.props.editPopUpFunction(true);
-    }
-
-    handleDataChange(args, event) {
-        /*    const value = event.target.value;
-         const name = args[0]['name'];
-         const newObj = {};
-         newObj[name] = value;
-         const newItemData = _.assign({}, this.state.tempData, newObj);
-         this.setState({
-         tempData: newItemData,
-         }); */
-    }
-
-    clearData() {
-        /*   this.setState({
-         tempData: this.state.itemData,
-         }); */
-    }
-
-    closeButton() {
-        //  this.props.editPopUpFunction(false);
-    }
-
-    saveData() {
-        /* this.setState({
-         itemData: this.state.tempData,
-         });
-         this.props.upDateJsonDataFunction(this.state.tempData.id, _.assign({}, this.state.tempData));
-         */
     }
 
     render() {
@@ -100,13 +38,5 @@ class ScoreBoard extends React.PureComponent {
     }
 }
 
-ScoreBoard.propTypes = {
-    /*
-     handleEdit: PropTypes.func,
-     edit: PropTypes.bool,
-     upDateJsonDataFunction: PropTypes.func,
-     editPopUpFunction: PropTypes.func,
-     showFilteredDetailsFunction: PropTypes.func, */
-
-};
+ScoreBoard.propTypes = {};
 export default (ScoreBoard);

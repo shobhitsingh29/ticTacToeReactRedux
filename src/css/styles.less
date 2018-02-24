@@ -1,8 +1,9 @@
 
-body{
+body {
 
-  background-image: url("../../assets/img/background.jpg");
+  /* background-image: url("../../assets/img/background.jpg");*/
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -10,25 +11,69 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+.gridCell div {
+  color: #000;
+}
+
 .title {
   font-size: 3em;
-  display:inline;
+  display: inline;
 
   width: 100%;
-  padding:0  115px;
+  padding: 0 115px;
   color: white;
   text-transform: uppercase;
 }
-.header{
+
+.gridCell:first-child {
+  border-top: none;
+  border-left: none;
+}
+
+.gridCell:last-child {
+  border-bottom: none;
+  border-right: none;
+}
+
+.gridCell:nth-child(2) {
+  border-top: none;
+}
+
+.gridCell:nth-child(3) {
+  border-top: none;
+  border-right: none;
+}
+
+.gridCell:nth-child(4) {
+  border-left: none;
+}
+
+.gridCell:nth-child(6) {
+  border-right: none;
+}
+
+.gridCell:nth-child(7) {
+  border-left: none;
+  border-bottom: none;
+}
+
+.gridCell:nth-child(8) {
+  border-bottom: none;
+}
+
+.header {
 
   background-color: black;
 }
-.header a{
+
+.header a {
   outline: none;
   text-decoration: none;
 }
 
 .board {
+  background: white;
   padding: 10px 20vw;
   width: 60vw;
   height: 60vw;
@@ -57,8 +102,8 @@ body {
   grid-column: span 1;
   grid-row: span 1;
   cursor: pointer;
-  border: 2px solid white;
-  background-color: black;
+  border: 2px solid black;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +115,7 @@ body {
   width: 100%;
   text-align: center;
   padding: 10px;
-  background-color: rgb(100,100,100);
+  background-color: rgb(100, 100, 100);
   color: white;
   font-size: 1.5em;
   display: flex;
@@ -78,9 +123,9 @@ body {
 }
 
 .c_message {
-  width:40%;
-  padding: 10px;
-  margin: 5px;
+  width: 40%;
+  padding: 0;
+  margin: 0;
   margin-right: 5%;
 }
 
@@ -90,18 +135,26 @@ body {
   padding: 10px;
   margin: 5px;
   margin-left: 5%;
-  background-color: rgb(150,150,150);
+  background-color: red;
   color: white;
   border-radius: 5px;
 }
 
+.c_message::first-letter {
+  color: red;
+  font-size: 40px;
+  margin-top: 16px;
+  margin-right: 10px;
+
+}
+
 .reset:hover {
-  background-color: rgb(50,50,50);
+  background-color: rgb(50, 50, 50);
   color: white;
 }
 
 .scoreboard {
-  background-color: rgb(200,200,200);
+  background-color: rgb(200, 200, 200);
   color: white;
   display: flex;
   flex-wrap: wrap;
@@ -113,7 +166,7 @@ body {
   font-size: 2em;
   width: 100%;
   padding: 5px;
-  background-color: rgb(50,50,50);
+  background-color: rgb(50, 50, 50);
   color: white;
 }
 
@@ -124,9 +177,12 @@ body {
   background-color: white;
   color: rgb(1, 45, 0);
   border-radius: 5px;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .score {
+  font-size: 160px;
   min-width: 30%;
   padding: 5px;
   margin: 5px;

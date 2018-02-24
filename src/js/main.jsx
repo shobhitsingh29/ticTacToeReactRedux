@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import createSagaMiddleware from "redux-saga";
-import { Provider } from "react-redux";
-import { combineReducers, createStore, applyMiddleware } from "redux";
+import {Provider} from "react-redux";
+import {combineReducers, createStore, applyMiddleware} from "redux";
 import stateReducer from "./reducers/statereducer";
 
 // import {logger, crashReporter} from "./middlewares/midlleware";
@@ -13,15 +13,15 @@ import rootSaga from "./sagas/saga";
 
 const sagaMiddleware = createSagaMiddleware();
 const reducers = combineReducers({
-  state: stateReducer
+    state: stateReducer
 });
 const store = createStore(reducers,
-  applyMiddleware(sagaMiddleware));
+    applyMiddleware(sagaMiddleware));
 
 sagaMiddleware.run(rootSaga);
 
 export const Main = () => (<Provider store={store}>
-  <App />
+    <App />
 </Provider>);
 
 ReactDOM.render(<Main />, document.getElementById("root"));
