@@ -37,27 +37,27 @@ export default function stateReducer(state = initialState, action) {
 
         case actionTypes.SELECT:
             const selection = action.idx;
-            const noMove = state.board[selection].length > 0 || state.isDone;
+            const inValidMove = state.board[selection].length > 0 || state.isDone;
             let newBoard = state.board.map((val, key) => {
                 if (val.length > 0) {
                     return val;
                 }
                 return action.idx === key ? state.currentPlayer : val;
             });
-            newBoard = noMove ? state.board : newBoard;
+            newBoard = inValidMove ? state.board : newBoard;
             const winningCheck = combos.some((val) => val.every((index) => newBoard[index] === state.currentPlayer));
             const drawCheck = (newBoard.reduce((a, b) => a + b, "")).length === 9;
             const newScore = _.assign({}, state.scores);
-            if (winningCheck && !noMove) {
+            if (winningCheck && !inValidMove) {
                 if (state.currentPlayer === "X") {
                     newScore["player1"] += 1;
                 } else {
                     newScore["player2"] += 1;
                 }
-            } else if (drawCheck && !noMove) {
+            } else if (drawCheck && !inValidMove) {
                 newScore.draw += 1;
             }
-            const currPlayer = noMove || winningCheck || drawCheck ? state.currentPlayer : (state.currentPlayer === "X" ? "O" : "X");
+            const currPlayer = inValidMove || winningCheck || drawCheck ? state.currentPlayer : (state.currentPlayer === "X" ? "O" : "X");
             const currMessage = winningCheck ? `${currPlayer} won the game!` : (drawCheck ? "Its a draw!" : `${currPlayer} moves next`);
             return {
                 board: newBoard,
