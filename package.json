@@ -81,7 +81,7 @@
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "npm-run-all": "^4.0.2",
-    "open": "0.0.5",
+    "open": "6.0.0",
     "react-hot-loader": "3.0.0-beta.6",
     "react-test-renderer": "15.5.4",
     "redux-saga": "^0.15.6",
