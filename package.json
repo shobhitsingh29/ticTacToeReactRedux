@@ -60,7 +60,7 @@
     "eslint-config-react": "1.1.7",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-react": "^5.0.0",
-    "eslint-import-resolver-webpack": "^0.8.3",
+    "eslint-import-resolver-webpack": "^0.13.1",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-destructuring": "^2.1.0",
     "eslint-plugin-flow": "2.29.1",
